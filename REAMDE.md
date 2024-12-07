@@ -17,9 +17,10 @@ This project enables tracking and segmentation of video objects using a combinat
   - `label-studio-ml-backend/label_studio_ml/examples/segment_anything_2_video`
   - `segment-anything-2`
 - README.md (you are reading it :) )
-- Documentation
+- Documentation can be found here: [model.py](my-docs/docs/auto-docs/model.html), [test_api.py](label-studio-ml-backend/label_studio_ml/examples/segment_anything_2_video/test_api.py)
 - [Testing outline document](testing-plan.md): testing-plan.md
 - [Test script](.github/workflows/python-app.yml): .github/workflows/python-app.yml
+- Deliverables: While I was not able to completely implement two object tracking, I was able to get single object tracking and found some bugs in the existing codebase that I fixed!
 
 ### System Requirements
 - **Python**: Version 3.10 or higher
