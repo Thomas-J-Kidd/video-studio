@@ -40,7 +40,7 @@ cd segment-anything-2
 pip install -e .
 cd checkpoints
 ./download_ckpts.sh
-cd ..
+cd $VIDEO_STUDIO
 
 # Install additional requirements
 echo "Installing additional requirements..."
