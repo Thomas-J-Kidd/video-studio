@@ -21,6 +21,7 @@ This project enables tracking and segmentation of video objects using a combinat
 - [Testing outline document](testing-plan.md): testing-plan.md
 - [Test script](.github/workflows/python-app.yml): .github/workflows/python-app.yml
 - Deliverables: While I was not able to completely implement two object tracking, I was able to get single object tracking and found some bugs in the existing codebase that I fixed!
+- Please see the assets folder for the presentation and other diagrams
 
 ### System Requirements
 - **Python**: Version 3.10 or higher
