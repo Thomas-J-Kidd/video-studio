@@ -91,7 +91,21 @@ This will start the server required for running the ML-backed video segmentation
 - Start label studio with `label-studio start` command in another terminal
 - open label studio at [local host](http://localhost:8080)
 - log in or create a new account
-### Step 4: Configure you project
+### Step 4: Configure you project (TODO automatic configuration with the label studio python sdk)
 
-- Your labeling config 
-- Connect the ML backend using the appropriate API endpoint. Follow this tutorial: 
+- Your labeling config needs to be configures as mentiond here: [label-config-sam2-video](label-studio-ml-backend/label_studio_ml/examples/segment_anything_2_video/README.md)
+- Connect the ML backend using the appropriate API endpoint. You can copy this from your settings in the upper right corner of Label Studio at [local host](http://localhost:8080)
+- In you project settings go to the Model tag:
+
+    ![alt text](assets/model-image.png)
+- When configuring the model backend ensure your url is the following: 
+  ```
+  http://localhost:9090
+  ```
+  unless you specificed otherwise
+
+### Step 5: Add some videos to your project
+Click the import button and add some videos to you project'
+![alt text](assets/import-label.png)
+
+### Step 6: Label some videos!
