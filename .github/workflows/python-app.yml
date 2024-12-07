@@ -1,0 +1,49 @@
+name: Run Install and Pytest Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.8'
+
+    - name: Install CUDA Toolkit
+      run: |
+        sudo apt update
+        sudo apt install -y nvidia-cuda-toolkit
+        echo "CUDA installed"
+      
+    - name: Check for NVIDIA GPU
+      run: |
+        if ! command -v nvidia-smi &> /dev/null; then
+          echo "NVIDIA GPU not detected. Skipping CUDA tests."
+        else
+          nvidia-smi
+        fi
+
+    - name: Set up environment variables
+      run: source ./source-file.sh
+
+    - name: Run setup.sh script
+      run: |
+        chmod +x setup.sh
+        ./setup.sh
+
+    - name: Run Pytest
+      run: |
+        source .venv/bin/activate
+        pytest --maxfail=5 --disable-warnings
