@@ -12,6 +12,15 @@ This project enables tracking and segmentation of video objects using a combinat
 
 ## Requirements
 
+### Project Requirements
+- Program: see the two repos 
+  - `label-studio-ml-backend/label_studio_ml/examples/segment_anything_2_video`
+  - `segment-anything-2`
+- README.md (you are reading it :) )
+- Documentation
+- [Testing outline document](testing-plan.md): testing-plan.md
+- [Test script](.github/workflows/python-app.yml): .github/workflows/python-app.yml
+
 ### System Requirements
 - **Python**: Version 3.10 or higher
 - **CUDA Drivers**: Ensure CUDA drivers are installed and `nvidia-smi` is available.
